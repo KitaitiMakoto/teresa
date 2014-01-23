@@ -3,3 +3,14 @@ bower_components/
 .vagrant/
 vendor/bundle/
 .bundle/
+Berksfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+/cookbooks
+
+# Bundler
+bin/*
