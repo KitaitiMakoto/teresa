@@ -15,3 +15,4 @@
   package pkg
 end
 
+package "git"
