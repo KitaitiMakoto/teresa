@@ -17,6 +17,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ci_config.vm.network :private_network, ip: "192.168.33.101"
   end
 
+  config.vm.define :web do |web_config|
+    web_config.vm.hostname = "web.phantomcss-ci.local"
+    web_config.vm.network :private_network, ip: "192.168.33.102"
+  end
+
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   # config.vm.box_url = "http://domain.com/path/to/above.box"
