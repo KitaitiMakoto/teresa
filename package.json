@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "casperjs": "~1.1.0-beta3"
+    "casperjs": "~1.1.0-beta3",
+    "resemble": "~1.0.3"
   }
 }
