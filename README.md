@@ -8,7 +8,7 @@ SETTING UP
 
 1. Install VirtualBox(or so): https://www.virtualbox.org/wiki/Downloads
 2. Install Vagrant: http://www.vagrantup.com/downloads.html
-3. Add Ubuntu box to Vagrant as "ubuntu1304": http://goo.gl/ceHWg
+3. Add Ubuntu box to Vagrant as "ubuntu1304": `$ vagrant box add ubuntu1304 http://goo.gl/ceHWg`
 4. Start virtual machine:
 
 ```
