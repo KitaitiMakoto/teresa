@@ -6,7 +6,7 @@ SETTING UP
 
 ### Repository
 
-1. Add SSH public key to GitHub: Acciybt settubgs > SSH Keys
+1. Add SSH public key to GitHub: Account settings > SSH Keys
 2. Clone this repository: `$ git clone git@github.com:KitaitiMakoto/phantomcss-ci.git` or use SourceTree
 3. Move to repository directory in terminal: `$ cd path/to/phantomcss-ci` to follow steps below
 
