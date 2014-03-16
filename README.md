@@ -1,5 +1,5 @@
-phantomcss-ci
-=============
+Teresa
+======
 
 SETTING UP
 -----
