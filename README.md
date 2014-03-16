@@ -1,6 +1,8 @@
 Teresa
 ======
 
+<img src="http://storage.canalblog.com/50/69/442947/23793929.jpg" width="30%">
+
 SETTING UP
 -----
 
