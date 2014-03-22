@@ -44,6 +44,7 @@ Bringing machine 'ci' up with 'virtualbox' provider...
 3. Install Chef cookbooks: `$ berks install --path=cookbooks`
 4. Prepare Chef Solo on virtual machine: `$ knife solo prepare 192.168.33.101`
 5. Install middlewares into virtual machine(it may take several minites): `$ knife solo cook 192.168.33.101 nodes/ci.teresa.local.json`
+6. You can see Jenkins control panel at http://192.168.33.101:8080
 
 ### PhantomCSS
 
