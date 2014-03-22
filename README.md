@@ -39,6 +39,12 @@ Bringing machine 'ci' up with 'virtualbox' provider...
 
 ### Chef
 
+1. Install knife solo: `$ gem install knife-solo`
+2. Install Berkshelf: `$ gem install berkshelf`
+3. Install Chef cookbooks: `$ berks install --path=cookbooks`
+4. Prepare Chef Solo on virtual machine: `$ knife solo prepare 192.168.33.101`
+5. Install middlewares into virtual machine(it may take several minites): `$ knife solo cook 192.168.33.101 nodes/ci.teresa.local.json`
+
 ### PhantomCSS
 
 
