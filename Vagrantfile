@@ -13,12 +13,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu1304"
 
   config.vm.define :ci do |ci_config|
-    ci_config.vm.hostname = "ci.phantomcss-ci.local"
+    ci_config.vm.hostname = "ci.teresa.local"
     ci_config.vm.network :private_network, ip: "192.168.33.101"
   end
 
   # config.vm.define :web do |web_config|
-  #   web_config.vm.hostname = "web.phantomcss-ci.local"
+  #   web_config.vm.hostname = "web.teresa.local"
   #   web_config.vm.network :private_network, ip: "192.168.33.102"
   # end
 
