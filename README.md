@@ -48,6 +48,15 @@ Bringing machine 'ci' up with 'virtualbox' provider...
 
 ### PhantomCSS
 
+1. Login to CI server: `$ vagrant ssh ci`
+2. Move to shared directory: `[ci]$ cd /vagrant`
+3. Install Node modules: `[ci]$ npm install`
+4. Install Bower: `[ci]$ sudo npm install -g bower`
+5. Install Bower components: `[ci]$ bower install`
+6. Run test:  
+   `[ci]$ cd bower_components/phantomcss`  
+   `[ci]$ ../../node_modules/.bin/casperjs test ./demo/testsuite.js`
+7. Check result images on host machine's ./bower_components/phantomcss/screenshots directory
 
 LICENSE
 -------
