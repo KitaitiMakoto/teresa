@@ -9,8 +9,8 @@ SETTING UP
 ### Repository
 
 1. Add SSH public key to GitHub: Account settings > SSH Keys
-2. Clone this repository: `$ git clone git@github.com:KitaitiMakoto/phantomcss-ci.git` or use SourceTree
-3. Move to repository directory in terminal: `$ cd path/to/phantomcss-ci` to follow steps below
+2. Clone this repository: `$ git clone git@github.com:KitaitiMakoto/teresa.git` or use SourceTree.
+3. Move to repository directory in terminal: `$ cd path/to/teresa` to follow steps below.
 
 ### Vagrant
 
@@ -22,7 +22,6 @@ SETTING UP
 ```
 $ vagrant up
 Bringing machine 'ci' up with 'virtualbox' provider...
-Bringing machine 'web' up with 'virtualbox' provider...
 [ci] Clearing any previously set forwarded ports...
 [ci] Clearing any previously set network interfaces...
 [ci] Preparing network interfaces based on configuration...
@@ -40,8 +39,24 @@ Bringing machine 'web' up with 'virtualbox' provider...
 
 ### Chef
 
+1. Install knife solo: `$ gem install knife-solo`
+2. Install Berkshelf: `$ gem install berkshelf`
+3. Install Chef cookbooks: `$ berks install --path=cookbooks`
+4. Prepare Chef Solo on virtual machine: `$ knife solo prepare 192.168.33.101`
+5. Install middlewares into virtual machine(it may take several minites): `$ knife solo cook 192.168.33.101 nodes/ci.teresa.local.json`
+6. You can see Jenkins control panel at http://192.168.33.101:8080
+
 ### PhantomCSS
 
+1. Login to CI server: `$ vagrant ssh ci`
+2. Move to shared directory: `[ci]$ cd /vagrant`
+3. Install Node modules: `[ci]$ npm install`
+4. Install Bower: `[ci]$ sudo npm install -g bower`
+5. Install Bower components: `[ci]$ bower install`
+6. Run test:  
+   `[ci]$ cd bower_components/phantomcss`  
+   `[ci]$ ../../node_modules/.bin/casperjs test ./demo/testsuite.js`
+7. Check result images on host machine's ./bower_components/phantomcss/screenshots directory
 
 LICENSE
 -------
